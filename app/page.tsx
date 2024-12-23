@@ -1,43 +1,18 @@
+"use client"
+
 import Link from "next/link"
 import { Wallet } from 'lucide-react'
 import Image from "next/image"
+import React from 'react';
+import CreateStablecoinModal from '../components/create';
+import Nav from "@/components/nav";
 
 export default function Home() {
+
   return (
     <div className="min-h-screen bg-[#020314] text-white pt-6">
       {/* Navigation */}
-      <nav className="w-[80%] border border-secondary/10 shadow-md shadow-secondary/10 rounded-full mx-auto px-4 py-4 flex items-center justify-between">
-        <div className="flex items-center space-x-8">
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-secondary rounded-full flex items-center justify-center">
-              <span className="text-white font-bold">S</span>
-            </div>
-            <span className="text-white font-semibold">HODLL</span>
-          </Link>
-          
-          <div className="hidden md:flex items-center space-x-6">
-            <Link href="/view-stablecoins" className="text-gray-300 hover:text-white transition-colors">
-              View Stablecoins
-            </Link>
-            <Link href="/mint" className="text-gray-300 hover:text-white transition-colors">
-              Mint
-            </Link>
-            <Link href="/redeem" className="text-gray-300 hover:text-white transition-colors">
-              Redeem
-            </Link>
-            <Link href="/help" className="text-gray-300 hover:text-white transition-colors">
-              Help
-            </Link>
-          </div>
-        </div>
-
-        <button 
-          className="bg-secondary hover:bg-secondary/80 text-white rounded-full px-6 py-2 flex items-center space-x-2"
-        >
-          <Wallet className="w-4 h-4" />
-          <span>Connect Wallet</span>
-        </button>
-      </nav>
+      <Nav />
 
       {/* Hero Section */}
       <main className="container mx-auto px-4 pt-20 pb-32 text-center">
@@ -49,11 +24,8 @@ export default function Home() {
           Your Stablecoins on Solana
         </h1>
         
-        <button 
-          className="bg-secondary hover:bg-secondary/80 text-white rounded-full px-8 py-4 text-lg"
-        >
-          Create Stablecoin
-        </button>
+        
+        <CreateStablecoinModal />
 
         {/* Coin Circle Animation */}
             {/* Euro Coin */}
