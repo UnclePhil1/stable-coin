@@ -9,12 +9,8 @@ import {
 } from "@/components/ui/select";
 
 const CreateStablecoinModal = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
   const [image, setImage] = useState<string | null>(null);
 
-  const toggleModal = () => {
-    setIsModalOpen(!isModalOpen);
-  };
 
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];

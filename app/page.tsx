@@ -1,7 +1,5 @@
 "use client"
 
-import Link from "next/link"
-import { Wallet } from 'lucide-react'
 import Image from "next/image"
 import React from 'react';
 import CreateStablecoinModal from '../components/create';
