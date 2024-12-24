@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Trispace } from 'next/font/google'
+import SolanaContext from "./SolanaContext";
 
 export const metadata: Metadata = {
   title: "HODLL",
@@ -20,7 +21,9 @@ export default function RootLayout({
       <body
         className={inter.className}
       >
+        <SolanaContext>
         {children}
+        </SolanaContext>
       </body>
     </html>
   );
