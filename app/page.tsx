@@ -8,7 +8,7 @@ import Nav from "@/components/nav";
 export default function Home() {
 
   return (
-    <div className="min-h-screen bg-[#020314] text-white pt-6">
+    <div className="min-h-screen relative bg-[#020314] text-white pt-6">
       {/* Navigation */}
       <Nav />
 
