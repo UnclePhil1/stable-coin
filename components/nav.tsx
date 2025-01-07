@@ -2,10 +2,8 @@
 import { Wallet } from "lucide-react";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 import { useWallet } from '@solana/wallet-adapter-react';
 import { useMemo } from 'react';
-import { SelectAndConnectWalletButton } from "./selectAndConnectWallet";
 
 
 const WalletMultiButtonDynamic = dynamic(
@@ -47,7 +45,7 @@ const Nav = () => {
           </Link>
         </div>
       </div>
-      {/* <WalletMultiButtonDynamic className="bg-secondary hover:bg-secondary/80 text-white rounded-full px-6 py-2 flex items-center space-x-2">
+      <WalletMultiButtonDynamic className="bg-secondary hover:bg-secondary/80 text-white rounded-full px-6 py-2 flex items-center space-x-2">
       {connected ? truncatedAddress :  (
         <>
         <Wallet className="w-4 h-4" />
@@ -55,8 +53,7 @@ const Nav = () => {
         </>
         
         )}
-      </WalletMultiButtonDynamic> */}
-        <WalletMultiButton className="btn btn-ghost" />
+      </WalletMultiButtonDynamic>
     </nav>
   );
 };

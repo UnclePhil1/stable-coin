@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Program, AnchorProvider, web3, utils, setProvider } from '@coral-xyz/anchor';
+import { Program, AnchorProvider, web3, setProvider } from '@coral-xyz/anchor';
 import { Stablecoin } from "@/types/stablecoin";
 import idl from "@/types/stablecoin.json";
 import { PublicKey } from '@solana/web3.js';
