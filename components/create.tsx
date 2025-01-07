@@ -8,7 +8,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Program, AnchorProvider, web3, setProvider } from '@coral-xyz/anchor';
+import { Program, AnchorProvider, setProvider } from '@coral-xyz/anchor';
 import { Stablecoin } from "@/types/stablecoin";
 import idl from "@/types/stablecoin.json";
 import { PublicKey } from '@solana/web3.js';
@@ -26,7 +26,7 @@ const CreateStablecoinModal = () => {
   const {connection} = useConnection();
 
   useEffect(() => {
-    console.log(symbol);
+    console.log(symbol, programId);
     console.log(2);
     console.log(new anchor.BN(100));
   }, [symbol])
@@ -63,10 +63,10 @@ const CreateStablecoinModal = () => {
       if (!wallet.publicKey) throw new WalletNotSelectedError();
       const anchorProvider = getProvider();
       const program = new Program<Stablecoin>(idl_object, anchorProvider);
-      const [stableCoinPDA, _] = web3.PublicKey.findProgramAddressSync(
-        [anchor.utils.bytes.utf8.encode("stablecoin")],
-        programId
-    );
+    //   const [stableCoinPDA, _] = web3.PublicKey.findProgramAddressSync(
+    //     [anchor.utils.bytes.utf8.encode("stablecoin")],
+    //     programId
+    // );
     
       // await program.methods.initialize(symbol, 2, new anchor.BN(100)).accountsStrict({ 
       //   stablecoin: stableCoinPDA,

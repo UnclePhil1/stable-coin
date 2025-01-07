@@ -15,7 +15,7 @@ interface Stablecoins {
     decimals: number;
     totalSupply: BN;
     price: BN;
-}[]
+}
 
 const ViewStablecoins = () => {
   const placeholderImage = "/images/dol.png"; 
