@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import CreateStablecoinModal from "../components/create";
 import Nav from "@/components/nav";
+// import { WalletConnection } from '@/components/WalletAuth';
 
 interface StablecoinCardProps {
   name: string;
@@ -32,6 +33,7 @@ const StablecoinCard = ({
   return (
     <div className="bg-primary/60 border border-secondary/10 rounded-xl p-6 flex flex-col gap-4">
       {/* Header */}
+      {/* <WalletConnection /> */}
       <div className="flex items-center gap-3">
         <div className="w-12 h-12 bg-secondary rounded-full flex items-center justify-center">
           <span className="text-white text-2xl">$</span>
@@ -107,7 +109,7 @@ export default function Home() {
       symbol: "USDC",
       createdBy: {
         name: "Circle",
-        logo: "/circle-logo.png",
+        logo: "",
         date: "94 days",
       },
       targetFiat: "USD",
@@ -153,7 +155,7 @@ export default function Home() {
         </div>
 
         {/* USDT Coin */}
-        <div className="lg:absolute top-[30%] left-[15%] -translate-x-1/2 bottom-0 hiddeon">
+        {/* <div className="lg:absolute top-[30%] left-[15%] -translate-x-1/2 bottom-0 hiddeon">
           <div className="w-14 h-14 bg-usdt rounded-full flex items-center justify-center">
             <Image
               src="/images/usdt.png"
@@ -163,10 +165,10 @@ export default function Home() {
               className="w-10 h-10"
             />
           </div>
-        </div>
+        </div> */}
 
         {/* Dollar Coin */}
-        <div className="lg:absolute right-[10%] -translate-x-1/2 top-[40%] hiddeon">
+        {/* <div className="lg:absolute right-[10%] -translate-x-1/2 top-[40%] hiddeon">
           <div className="w-14 h-14 bg-usdc rounded-full flex items-center justify-center">
             <Image
               src="/images/dol.png"
@@ -176,7 +178,7 @@ export default function Home() {
               className="w-10 h-10"
             />
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-col gap-4 bg-secondary/10 p-4 rounded-lg my-10">
           <div className="flex justify-between items-center p-4 bg-primary rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
